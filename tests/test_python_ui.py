@@ -1,13 +1,10 @@
 import re
 from playwright.sync_api import expect
 
-def test_google_search(page):
-    page.goto("https://www.google.com/ncr")
-
-
-from playwright.sync_api import sync_playwright
 
 def test_open_google():
+    from playwright.sync_api import sync_playwright
+
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=False)
         page = browser.new_page()
@@ -19,10 +16,9 @@ def test_open_google():
         browser.close()
 
 
-
-from playwright.sync_api import sync_playwright
-
 def test_google_search():
+    from playwright.sync_api import sync_playwright
+
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=False)
         page = browser.new_page()
@@ -38,9 +34,8 @@ def test_google_search():
         browser.close()
 
 
-from playwright.sync_api import sync_playwright
-
 def test_button_click():
+    from playwright.sync_api import sync_playwright
     with sync_playwright() as p:
         browser = p.chromium.launch(headless=False)
         page = browser.new_page()
