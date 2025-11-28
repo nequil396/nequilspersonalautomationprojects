@@ -22,6 +22,6 @@ def test_get_users():
         
         assert data["page"] == 1
         assert len(data["data"]) > 0
-        
+        print("test")
 
 
