@@ -10,8 +10,10 @@ def test_get_users():
                 "Authorization": "Bearer your_token_here",
                 "Accept": "application/json",
                 "X-Api-Key" : "reqres-free-v1"
-                }
-            )
+                
+}
+
+        )
         
         response = request.get("https://reqres.in/api/users")
         
@@ -20,5 +22,6 @@ def test_get_users():
         
         assert data["page"] == 1
         assert len(data["data"]) > 0
+        
 
 
